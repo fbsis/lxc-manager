@@ -11,6 +11,7 @@ select_subject() {
             ;;
         LXC|lxc)
             echo "Running LXC Script..."
+            chmod +x lxc.sh  # Adiciona permissão de execução ao script de LXC
             ./lxc.sh  # Chama o script de LXC
             ;;
         *)
