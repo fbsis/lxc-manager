@@ -7,12 +7,13 @@ select_subject() {
     case $subject in
         firewall)
             echo "Running Firewall Script..."
-            ./firewall.sh  # Chama o script de firewall
+            chmod +x firewall.sh
+            ./firewall.sh 
             ;;
         LXC|lxc)
             echo "Running LXC Script..."
-            chmod +x lxc.sh  # Adiciona permissão de execução ao script de LXC
-            ./lxc.sh  # Chama o script de LXC
+            chmod +x lxc.sh
+            ./lxc.sh 
             ;;
         *)
             echo "Invalid subject. Please choose either 'firewall' or 'LXC'."
